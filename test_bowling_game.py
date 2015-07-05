@@ -18,9 +18,7 @@ class TestBowlingGame(unittest.TestCase):
             self.game.roll(pins)
 
     def test_all_ones(self):
-
-        for i in range(20):
-            self.game.roll(1)
+        self.roll_many(pins=1, times=20)
 
         assert self.game.score == 20
 
