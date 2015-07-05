@@ -1,7 +1,14 @@
 import unittest
 
+from game import Game
+
 
 class TestBowlingGame(unittest.TestCase):
-    def test_something(self):
-        assert True == False
+    def test_gutter_game(self):
+        game = Game()
+
+        for i in range(20):
+            game.roll(0)
+
+        assert game.score == 0
 
