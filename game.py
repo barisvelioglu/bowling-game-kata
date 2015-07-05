@@ -4,4 +4,4 @@ class Game(object):
 
     @property
     def score(self):
-        pass
+        return 0
