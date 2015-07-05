@@ -44,3 +44,8 @@ class TestBowlingGame(unittest.TestCase):
 
         assert self.game.score == 24
 
+    def test_perfect_game(self):
+        self.roll_many(pins=10, times=12)
+
+        assert self.game.score == 300
+
