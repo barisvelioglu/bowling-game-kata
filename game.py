@@ -12,5 +12,8 @@ class Game(object):
     def score(self):
         score = 0
         for frame_index in range(0, 20, 2):
-            score += self._rolls[frame_index] + self._rolls[frame_index+1]
+            if self._rolls[frame_index] + self._rolls[frame_index+1] == 10:
+                score += 10 + self._rolls[frame_index+2]
+            else:
+                score += self._rolls[frame_index] + self._rolls[frame_index+1]
         return score
