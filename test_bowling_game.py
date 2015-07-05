@@ -9,9 +9,7 @@ class TestBowlingGame(unittest.TestCase):
         self.game = Game()
 
     def test_gutter_game(self):
-        times = 20
-        pins = 0
-        self.roll_many(pins, times)
+        self.roll_many(pins=0, times=20)
 
         assert self.game.score == 0
 
