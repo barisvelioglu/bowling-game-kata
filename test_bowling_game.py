@@ -11,10 +11,13 @@ class TestBowlingGame(unittest.TestCase):
     def test_gutter_game(self):
         times = 20
         pins = 0
-        for i in range(times):
-            self.game.roll(pins)
+        self.roll_many(pins, times)
 
         assert self.game.score == 0
+
+    def roll_many(self, pins, times):
+        for i in range(times):
+            self.game.roll(pins)
 
     def test_all_ones(self):
 
