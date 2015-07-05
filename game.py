@@ -10,4 +10,7 @@ class Game(object):
 
     @property
     def score(self):
-        return sum(self._rolls)
+        score = 0
+        for frame_index in range(0, 20, 2):
+            score += self._rolls[frame_index] + self._rolls[frame_index+1]
+        return score
