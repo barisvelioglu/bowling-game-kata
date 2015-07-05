@@ -12,4 +12,4 @@ class Game(object):
 
     @property
     def score(self):
-        return self._score
+        return sum(self._rolls)
