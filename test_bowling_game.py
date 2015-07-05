@@ -22,11 +22,11 @@ class TestBowlingGame(unittest.TestCase):
 
         assert self.game.score == 20
 
-    # def test_one_spare(self):
-    #     self.game.roll(5)
-    #     self.game.roll(5)
-    #     self.game.roll(3)
-    #     self.roll_many(pins=0, times=17)
-    #
-    #     assert self.game.score == 16
-    #
+    def test_one_spare(self):
+        self.game.roll(5)
+        self.game.roll(5)
+        self.game.roll(3)
+        self.roll_many(pins=0, times=17)
+
+        assert self.game.score == 16
+
